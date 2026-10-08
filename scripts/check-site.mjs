@@ -10,7 +10,7 @@ const pages = [
 ];
 
 const requiredCopy = new Map([
-  ['index.html', ["Managing Britain's mobile data infrastructure. Securely.", "The UK's national mobile data infrastructure", '©2022 UK Cellnet.']],
+  ['index.html', ["Managing Britain's mobile data infrastructure. Securely.", "The UK's national mobile data infrastructure", '©2026 UK Cellnet.']],
   ['about/index.html', ["Britain's cellular infrastructure", 'Whichever mobile data provider you use']],
   ['staff/index.html', ['Daniel Ballentine', 'Sally Burns', 'Jeet Iyer', 'Erica Small']],
   ['contact/index.html', ['UK Cellnet cannot be contacted by customers.']],
@@ -31,10 +31,10 @@ for (const page of pages) {
   for (const text of requiredCopy.get(page) ?? []) {
     if (!html.includes(text)) failures.push(`Missing required copy in ${page}: ${text}`);
   }
-  for (const match of html.matchAll(/(?:href|src)="(\/[^"]+)"/g)) {
+  for (const match of html.matchAll(/(?:href|src)="([^"]+)"/g)) {
     const target = match[1].split(/[?#]/, 1)[0];
-    if (target === '/') continue;
-    let localPath = join(root, target);
+    if (!target || target.startsWith('#') || /^[a-z]+:/i.test(target)) continue;
+    let localPath = resolve(dirname(fullPath), target);
     if (target.endsWith('/')) localPath = join(localPath, 'index.html');
     if (!existsSync(localPath)) failures.push(`Broken local reference in ${page}: ${target}`);
   }

@@ -18,7 +18,7 @@ Treat exact wording, names, dates, telephone numbers, route names, image content
 - The homepage service-status message.
 - “Managing Britain's mobile data infrastructure. Securely.”
 - “The UK's national mobile data infrastructure”.
-- Footer year `©2022`.
+- The recovered Wix footer year was `©2022`; the replacement was deliberately updated to `©2026` with the owner's approval on 8 October 2026.
 - The data-access messages “Welcome back, Sally.” and “You last logged on yesterday.”
 
 ## Human verification still required
