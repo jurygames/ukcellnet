@@ -6,6 +6,7 @@ const pages = [
   'index.html', 'about/index.html', 'staff/index.html', 'contact/index.html',
   'staff-portal/index.html', 'data-access/index.html',
   'localised-data-storage-upload-iclou/index.html',
+  'copy-of-localised-data-storage-uplo/index.html',
   'padlock-archive-45581/index.html', 'celldata-backend/index.html', '404.html'
 ];
 
@@ -15,7 +16,9 @@ const requiredCopy = new Map([
   ['staff/index.html', ['Daniel Ballentine', 'Sally Burns', 'Jeet Iyer', 'Erica Small']],
   ['contact/index.html', ['UK Cellnet cannot be contacted by customers.']],
   ['staff-portal/index.html', ['020 3962 0484', 'Cellular Data Portal']],
-  ['data-access/index.html', ['Welcome back, Sally.', 'https://ukcellnet.uk/celldata/index.html']]
+  ['data-access/index.html', ['Welcome back, Sally.', 'https://ukcellnet.uk/celldata/index.html', 'Staff Only', 'Please enter your access code.']],
+  ['localised-data-storage-upload-iclou/index.html', ['scottdavies0@icloud.com', 'eu quadrigis, ALL CAPS']],
+  ['copy-of-localised-data-storage-uplo/index.html', ['Deleted 23:52 on 10/11/2010.', 'File first created 09/11/2010.', 'voice-memo-091110.mp3', 'assets/js/voice-memo.js']]
 ]);
 
 const failures = [];
@@ -45,6 +48,7 @@ for (const match of css.matchAll(/url\("?(\.\.\/[^"')]+)"?\)/g)) {
   const target = resolve(dirname(join(root, 'assets/css/site.css')), match[1]);
   if (!existsSync(target)) failures.push(`Broken CSS asset: ${match[1]}`);
 }
+if (!existsSync(join(root, 'assets/audio/voice-memo-091110.mp3'))) failures.push('Missing local voice memo audio.');
 
 if (failures.length) {
   console.error(failures.join('\n'));

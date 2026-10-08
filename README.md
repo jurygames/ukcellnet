@@ -15,7 +15,7 @@ Then visit `http://localhost:8080/`. Edit the HTML files directly and use `asset
 ## Structure
 
 - Public corporate pages: `/`, `/about/`, `/staff/`, `/contact/`, `/staff-portal/`
-- Puzzle-related routes: `/data-access/`, `/localised-data-storage-upload-iclou/`, `/padlock-archive-45581/`, `/celldata-backend/`
+- Puzzle-related routes: `/data-access/`, `/localised-data-storage-upload-iclou/`, `/copy-of-localised-data-storage-uplo/`, `/padlock-archive-45581/`, `/celldata-backend/`
 - Optimised local images: `assets/images/`
 - Unmodified recovered source images: `assets/images/source/`
 - One small script, used only for the historic access-code interaction: `assets/js/access.js`
