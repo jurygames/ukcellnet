@@ -278,7 +278,7 @@ main { flex: 1; }
 }
 .legacy-menubar strong { margin-right: 1.2rem; font-weight: 700; }
 .legacy-menubar span { margin-right: .9rem; }
-.legacy-desktop { min-height: calc(100vh - 1.45rem); display: grid; place-items: center; padding: 1.5rem; }
+.legacy-desktop { min-height: calc(100vh - 1.45rem); display: grid; place-items: center; align-content: center; gap: 1.5rem; padding: 1.5rem; }
 .legacy-window {
   width: min(100%, 34rem);
   overflow: hidden;
@@ -322,6 +322,9 @@ main { flex: 1; }
 .archive-unlocked h2 { margin: 0 0 .6rem; color: #2f6c34; font-size: 1.1rem; }
 .archive-unlocked p { max-width: 24rem; margin: 0 auto 1rem; color: #555; font-size: .84rem; }
 .archive-unlocked .archive-file { display: inline-block; padding: .5rem .7rem; border: 1px solid #99ad9a; border-radius: .25rem; color: #315f35; background: #e8f0e8; font: .73rem "Lucida Grande", Arial, sans-serif; }
+.archive-clue { width: min(100%, 30rem); margin: 0; text-align: center; }
+.archive-clue img { width: 100%; height: auto; border: 1px solid rgba(50,50,50,.45); box-shadow: 0 .8rem 1.6rem rgba(0,0,0,.24); }
+.archive-clue figcaption { margin-top: .5rem; color: #34434c; font-size: .72rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
 .padlock-landing { min-height: 100vh; display: grid; place-items: center; padding: 1.5rem; color: #444; background: #f6f6f6; font-family: Arial, Helvetica, sans-serif; text-align: center; }
 .padlock-landing img { width: min(100%, 15rem); margin: 0 auto 1rem; }
 .padlock-landing h1 { margin: 0 0 .35rem; font-size: 1.2rem; }
