@@ -8,7 +8,9 @@ const pages = [
   'localised-data-storage-upload-iclou/index.html',
   'copy-of-localised-data-storage-uplo/index.html',
   'padlock-archive-45581/index.html', 'padlock-archive-45581-decrypt/index.html',
-  'padlock-archive-45596-decrypt/index.html', 'celldata-backend/index.html', '404.html'
+  'padlock-archive-45592/index.html', 'padlock-archive-45592-decrypt/index.html',
+  'padlock-archive-45596/index.html', 'padlock-archive-45596-decrypt/index.html',
+  'celldata-backend/index.html', '404.html'
 ];
 
 const requiredCopy = new Map([
